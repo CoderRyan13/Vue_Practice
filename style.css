@@ -1,0 +1,93 @@
+.header {
+    height: 45px;
+
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(192, 191, 191);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+    z-index: 100;
+}
+
+.headerDark {
+    height: 45px;
+
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    background-color: rgb(22, 22, 22);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+    z-index: 100;
+}
+
+.myvue {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.about, .home, .contact {
+    margin-left: 20px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: bold;
+}
+
+a:visited, a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(90, 175, 255);
+}
+
+.active {
+    color: rgb(9, 68, 9);
+}
+
+.main {
+    margin-top: 80px;
+}
+
+.modeBtn {
+    background-color: blue; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    position: absolute;
+    right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modeBtn:disabled {
+    background-color: rgb(126, 186, 235);
+}
+
+.container {
+    margin-top: 50px;
+}
+
+
+  
+  
