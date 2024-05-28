@@ -15,6 +15,6 @@
         "link": {"text": "Contact", "url": "contact.html", "class": "contact"}, 
         "pageTitle": "Contact Page",
         "content": "This is the contact content",
-        "published": false
+        "published": true
     }   
 ]

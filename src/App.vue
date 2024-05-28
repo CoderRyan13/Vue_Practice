@@ -1,8 +1,8 @@
 <template>
     <navbar :pages="pages" :active-page="activePage" :header-link-click="(index) => activePage = index"></navbar>
-
-    <!-- <page-viewer v-if="pages.length > 0" :page="pages[activePage]"></page-viewer> -->
-    <create-page :page-created="pageCreated"></create-page>
+    <router-veiw></router-veiw>
+    <!-- <page-viewer v-if="pages.length > 0" :page="pages[activePage]"></page-viewer>
+    <create-page @page-created="pageCreated"></create-page> -->
 </template>
 
 <script>

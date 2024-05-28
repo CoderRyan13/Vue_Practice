@@ -60,7 +60,24 @@
 </template>
 <script>
     export default {
-        props: ['pageCreated'],
+        // props: ['pageCreated'], this gets replaced by an event
+        emits: {
+            pageCreated({pageTitle, content, link}) {
+                if (!pageTitle) {
+                    return false;
+                }
+
+                if (!content) {
+                    return false;
+                }
+
+                if(!link || !link.text || link.url) {
+                    return false;
+                }
+
+                return true; 
+            }
+        },
         computed: {
             isFormInvalid() {
                 return !this.pageTitle || !this.content || !this.linkText || !this.linkUrl;
@@ -82,7 +99,7 @@
                     return;
                 }
 
-                this.pageCreated({
+                this.$emit('pageCreated', {
                     pageTitle: this.pageTitle,
                     content: this.content,
                     link: {
@@ -91,13 +108,20 @@
                         class: 'about'
                     },
                     published: this.published
-                })
+                });
 
                 this.pageTitle = '';
                 this.content = '';
                 this.linkText = '';
                 this.linkUrl = '';
                 this.published = true;
+            }
+        },
+        watch: {
+            pageTitle(newTitle, oldTitle) {
+                if (this.linkText === oldTitle) {
+                    this.linkText = newTitle;
+                }
             }
         }
     }
